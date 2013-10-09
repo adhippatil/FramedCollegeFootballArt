@@ -1,0 +1,211 @@
+@charset "utf-8";
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background: #ED5B1B;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	background-image: url(images/BG.png);
+	background-repeat: repeat-x;
+	background-position: left 250px;
+}
+ul, ol, dl { 
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+a img {
+	border: none;
+}
+a:link {
+	color: #42413C;
+	text-decoration: underline;
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus {
+	color: #000;
+	text-decoration: none;
+}
+
+/* ~~ this fixed width container surrounds all other elements ~~ */
+.container {
+	position: relative;
+	width: 960px;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+}
+.fltrt { 
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { 
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { 
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+#logo {
+	width: 400px;
+	height: 240px;
+	background-image: url(images/logo_florida.png);	
+	background-repeat: no-repeat;
+	background-position: center center;
+	float: left;
+}
+#pageHead {
+	width: 523px;
+	text-align: right;
+	color: #FFF;
+	float: right;
+}
+#pageHead h1{
+	margin: 10px 30px 0 0;
+	padding: 0px;
+	line-height: 30px;
+}
+#pageHead h2{
+	margin: 0 30px 0 0;
+	padding: 0 0 20px 0;
+	text-transform: uppercase;
+	font-size: 18px;
+	color: #000;
+}
+#footballArt {
+	float: right;
+	width: 523px;
+}
+#steps {
+	position: absolute;
+	width: 500px;
+	height: 445px;
+	top: 230px;
+	left: 30px;
+}
+#step1 {
+	width:319px;
+	height:145px;
+	background-image: url(images/step1.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	margin-left: 30px;
+}
+#step1 a{
+	font-size: 16px;
+	height: 40px;
+	width: 270px;
+	padding-top: 80px;
+	margin-left: 10px;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	line-height: 22px;
+	font-weight: bold;
+}
+#step2 {
+	width:319px;
+	height:104px;
+	background-image: url(images/step2.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	margin-left: 30px;
+	margin-top: 20px;
+}
+#frames {
+	width: 477px;
+	height:138px;
+	margin-left: 30px;
+	margin-top: 20px;
+}
+.content {
+	position: relative;
+	width: 960px;
+	margin: 0 auto;
+}
+.content #leftBar {
+	width: 350px;
+	float: left;
+	text-align: center;
+}
+.content #leftBar img {
+	margin: 0px auto 30px;
+	width: 300px;
+}
+.content #rightBar {
+	width: 600px;
+	float: right;
+}
+.content #rightBar #boxTop{
+	background-image:url(images/boxTOP.png);
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	width: 585px;
+	height: 39px;
+	float: right;
+}
+.content #rightBar #boxContent{
+	background-color: #FFF;
+	width: 585px;
+	float: right;
+}
+.content #rightBar #boxBottom{
+	width: 585px;
+	float: right;
+	background-image:url(images/boxBOTTOM.png);
+	background-position: top center;
+	background-repeat: no-repeat;
+	height: 80px;
+}
+#info {
+	padding: 10px;	
+}
+#info ul{
+	margin: 0px;
+	list-style: none; 
+}
+#info ul li{
+	margin-top: 20px;
+	padding-bottom: 20px;
+	line-height: 14px;
+	font-size: 10px;
+	border-bottom: 2px solid #BBB;
+}
+#info ul li .prodImg{
+	float: left;
+	margin-right: 10px;	
+	width: 140px;
+}
+#info ul li img{
+	max-width: 130px;
+	max-height: 200px;
+}
+#info ul li a img{
+	padding: 5px;
+	border: 1px solid #DDD;	
+}
+#info ul li a:hover img{
+	border: 1px solid #BBB;	
+}
+#info ul li .prodDesc{
+	float: left;
+	width: 350px;
+}
+#info ul li .prodDesc p{
+	padding: 0px;
+	margin: 0px;
+}
+#info ul li a{
+	text-transform: uppercase;
+	font-size: 14px;
+	display: block;
+	margin-bottom: 10px;
+}
