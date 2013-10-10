@@ -55,9 +55,11 @@ class ControllerProductCategory extends Controller {
 			
 			$this->data['heading_title'] = $category_info['name'];
 			
-			$this->data['description'] = html_entity_decode($category_info['description'], ENT_QUOTES, 'UTF-8');
-			
 			$this->data['text_sort'] = $this->language->get('text_sort');
+			
+			$this->data['description'] = html_entity_decode($category_info['description'], ENT_QUOTES, 'UTF-8');
+
+			$this->data['description_more'] = html_entity_decode($category_info['description_more'], ENT_QUOTES, 'UTF-8');
 			
 			$this->load->model('tool/image'); 
 			
@@ -101,6 +103,19 @@ class ControllerProductCategory extends Controller {
 						 
 			$category_total = $this->model_catalog_category->getTotalCategoriesByCategoryId($category_id);
 			$product_total = $this->model_catalog_product->getTotalProductsByCategoryId($category_id);
+
+			$this->data['parents'] = '';
+			$parents = $this->model_catalog_category->getParentCategory($category_id);
+			if(isset($parents['name'])){
+				$this->data['parents'] .= $parents['name'] != 'Schools' && $parents['name'] != 'Coaches' ? $parents['name'] : '';
+			}
+
+			if(isset($parents['parent_id']) && $parents['parent_id']){
+				$parents = $this->model_catalog_category->getParentCategory($parents['parent_id']);
+				if(isset($parents['name'])){
+					$this->data['parents'] .= $parents['name'] != 'Schools' && $parents['name'] != 'Coaches' ? $parents['name'] : '';
+				}
+			}
 			
 			if ($category_total || $product_total) {
         		$this->data['categories'] = array();

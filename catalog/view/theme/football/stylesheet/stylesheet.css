@@ -775,10 +775,10 @@ h3{
 .welcome{
 	float: left;
 	width: 767px;
-	height: 500 px;
 	border: 3px solid #555;
 	margin-bottom: 20px;
-	margin-top:0px }
+	margin-top:0px;
+}
 	
 	
 #welcome{
@@ -806,6 +806,11 @@ h3{
 	height: 52px;
 	margin: 0;
 	padding: 0;	
+}
+
+#description_more{
+	border: 1px solid #555;
+	padding: 20px;
 }
 
 /*** CLASSES ***/

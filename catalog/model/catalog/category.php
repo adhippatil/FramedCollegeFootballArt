@@ -44,5 +44,12 @@ class ModelCatalogCategory extends Model {
 
 		return $category_data;
 	}
+
+	public function getParentCategory($category_id){
+		
+		$query = $this->db->query("SELECT cd.name AS name, c.parent_id as parent_id FROM category c LEFT JOIN category_description cd ON (c.parent_id = cd.category_id) WHERE c.parent_id = cd.category_id AND c.category_id = '".$category_id."'");
+
+		return $query->row;
+	}
 }
 ?>

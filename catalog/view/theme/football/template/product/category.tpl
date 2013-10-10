@@ -101,7 +101,7 @@ $decimal_point = $this->language->get('decimal_point');
 		<tr>
 		  <?php for ($j = $i; $j < ($i + 3); $j++) { ?>
 		  <td width="33%" class="products"><?php if (isset($products[$j])) { ?>
-			<a href="<?php echo $products[$j]['href']; ?>"><img src="<?php echo $products[$j]['thumb']; ?>" title="<?php echo $products[$j]['name']; ?>" alt="<?php echo $products[$j]['name']; ?>" /></a><br />
+			<a href="<?php echo $products[$j]['href']; ?>"><img src="<?php echo $products[$j]['thumb']; ?>" title="<?php echo $products[$j]['name']; ?>" alt="<?=$heading_title?> <?=$parents?> - <?=$products[$j]['name']?>" /></a><br />
 			<a href="<?php echo $products[$j]['href']; ?>" class="prodName"><?php echo $products[$j]['name']; ?></a><br />
 			<span style="color: #999; font-size: 11px;"><?php echo $products[$j]['model']; ?></span><br />
 			<?php if ($display_price) { ?>
@@ -151,6 +151,11 @@ $decimal_point = $this->language->get('decimal_point');
 		<?php } ?>
 	  </table>
 	  <div class="pagination"><?php echo $pagination; ?></div>
+	  <?php if($description_more){ ?>
+		  <div id="description_more" class="clearfix">
+			<?=$description_more?>
+		  </div>
+	  <?php } ?>
 	  <?php } ?>
 	</div>
 	<div class="bottom">&nbsp;</div>

@@ -51,6 +51,10 @@
               <td><?php echo $entry_description; ?></td>
               <td><textarea name="category_description[<?php echo $language['language_id']; ?>][description]" id="description<?php echo $language['language_id']; ?>"><?php echo isset($category_description[$language['language_id']]) ? $category_description[$language['language_id']]['description'] : ''; ?></textarea></td>
             </tr>
+            <tr>
+              <td>Extra Description</td>
+              <td><textarea name="category_description[<?php echo $language['language_id']; ?>][description_more]" id="description_more<?php echo $language['language_id']; ?>"><?php echo isset($category_description[$language['language_id']]) ? $category_description[$language['language_id']]['description_more'] : ''; ?></textarea></td>
+            </tr>
           </table>
         </div>
 		<?php } ?>
@@ -137,6 +141,14 @@ CKEDITOR.replace('description<?php echo $language['language_id']; ?>', {
 	filebrowserUploadUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>',
 	filebrowserImageUploadUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>',
 	filebrowserFlashUploadUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>'
+});
+CKEDITOR.replace('description_more<?php echo $language['language_id']; ?>', {
+  filebrowserBrowseUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>',
+  filebrowserImageBrowseUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>',
+  filebrowserFlashBrowseUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>',
+  filebrowserUploadUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>',
+  filebrowserImageUploadUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>',
+  filebrowserFlashUploadUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>'
 });
 <?php } ?>
 //--></script>
